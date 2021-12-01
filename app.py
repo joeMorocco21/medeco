@@ -22,7 +22,7 @@ def allowed_files(filename):
 
 @app.route("/storImages", methods=['GET','POST'])
 def storImages():
-        dirnames = join(dirname(realpath(__file__)), 'static\\upload')
+        dirnames = join(dirname(realpath(__file__)), 'static/upload')
         UPLOAD_FOLDER = dirnames
         app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
         if 'file[]'not in request.files:
